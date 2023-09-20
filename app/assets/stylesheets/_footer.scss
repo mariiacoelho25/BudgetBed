@@ -1,0 +1,36 @@
+.footer {
+  background-color: #BA349D;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+}
+
+.footer-logo {
+  max-width: 90px;
+}
+
+.contact-info {
+  color: white;
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+
+.contact-info a {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline; 
+}

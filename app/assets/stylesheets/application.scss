@@ -1,12 +1,28 @@
 // Graphical variables
 @import "config/fonts";
 @import "config/colors";
-@import "config/bootstrap_variables";
+// @import "config/bootstrap_variables";
 
 // External libraries
-@import "bootstrap";
+// @import "bootstrap";
 @import "font-awesome";
 
 // Your CSS partials
-@import "components/index";
-@import "pages/index";
+// @import "components/index";
+// @import "pages/index";
+@import "footer";
+@import "navbar";
+
+// Media queries for responsive design
+@media (max-width: 768px) {
+    // Styles spécifiques aux petits écrans ici
+    // Vous pouvez également utiliser des classes Bootstrap pour la conception réactive
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    // Styles spécifiques aux écrans de taille moyenne ici
+}
+
+@media (min-width: 1201px) {
+    // Styles spécifiques aux grands écrans ici
+}
