@@ -78,3 +78,6 @@ group :test do
 end
 
 gem "devise", "~> 4.9"
+
+gem 'faker', '~> 2.18', '>= 2.18.1'
+

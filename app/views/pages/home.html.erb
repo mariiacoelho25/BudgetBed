@@ -1,158 +1,36 @@
+<!-- app/views/pages/home.html.erb -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Réservation d'hôtel</title>
+    <title>Liste des Hôtels</title>
 </head>
 <body>
     <header>
-        <h1>Réservation d'hôtel</h1>
+        <h1>Liste des Hôtels</h1>
     </header>
     <main>
-        <section class="search-form">
-            <h2>Recherchez des chambres</h2>
-            <form>
-                <label for="codePostal">Code Postal :</label>
-                <input type="text" id="codePostal" name="codePostal" placeholder="Entrez le code postal">
-
-                <label for="budget">Budget maximum :</label>
-                <input type="text" id="budget" name="budget" placeholder="Entrez votre budget">
-
-                <button type="submit">Rechercher</button>
-            </form>
-        </section>
-        <section class="results">
-            <!-- Les résultats de la recherche seront affichés ici -->
+        <section class="hotel-list">
+            <h2>Hôtels disponibles</h2>
+            <%= form_tag(root_path, method: :get) do %>
+                <label for="maxBudget">Budget maximum (en €) :</label>
+                <%= number_field_tag :max_budget, params[:max_budget], step: 10 %>
+                <%= submit_tag "Filtrer" %>
+            <% end %>
+            <ul>
+                <% @hotels.each do |hotel| %>
+                    <li>
+                        <%= link_to hotel.name, hotel_rooms_path(hotel) %>
+                    </li>
+                <% end %>
+            </ul>
         </section>
     </main>
+
+    <script>
+        // JavaScript code can be added here if needed
+    </script>
 </body>
 </html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Réservation d'hôtel</title>
-</head>
-<body>
-    <header>
-        <h1>Réservation d'hôtel</h1>
-    </header>
-    <main>
-        <section class="search-form">
-            <h2>Recherchez des chambres</h2>
-            <form>
-                <label for="codePostal">Code Postal :</label>
-                <input type="text" id="codePostal" name="codePostal" placeholder="Entrez le code postal">
-
-                <label for="budget">Budget maximum :</label>
-                <input type="text" id="budget" name="budget" placeholder="Entrez votre budget">
-
-                <button type="submit">Rechercher</button>
-            </form>
-        </section>
-        <section class="results">
-            <!-- Les résultats de la recherche seront affichés ici -->
-        </section>
-    </main>
-</body>
-</html><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Réservation d'hôtel</title>
-</head>
-<body>
-    <header>
-        <h1>Réservation d'hôtel</h1>
-    </header>
-    <main>
-        <section class="search-form">
-            <h2>Recherchez des chambres</h2>
-            <form>
-                <label for="codePostal">Code Postal :</label>
-                <input type="text" id="codePostal" name="codePostal" placeholder="Entrez le code postal">
-
-                <label for="budget">Budget maximum :</label>
-                <input type="text" id="budget" name="budget" placeholder="Entrez votre budget">
-
-                <button type="submit">Rechercher</button>
-            </form>
-        </section>
-        <section class="results">
-            <!-- Les résultats de la recherche seront affichés ici -->
-        </section>
-    </main>
-</body>
-</html><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Réservation d'hôtel</title>
-</head>
-<body>
-    <header>
-        <h1>Réservation d'hôtel</h1>
-    </header>
-    <main>
-        <section class="search-form">
-            <h2>Recherchez des chambres</h2>
-            <form>
-                <label for="codePostal">Code Postal :</label>
-                <input type="text" id="codePostal" name="codePostal" placeholder="Entrez le code postal">
-
-                <label for="budget">Budget maximum :</label>
-                <input type="text" id="budget" name="budget" placeholder="Entrez votre budget">
-
-                <button type="submit">Rechercher</button>
-            </form>
-        </section>
-        <section class="results">
-            <!-- Les résultats de la recherche seront affichés ici -->
-        </section>
-    </main>
-</body>
-</html><body>
-    <header>
-        <h1>Réservation d'hôtel</h1>
-    </header>
-    <main>
-        <section class="search-form">
-            <h2>Recherchez des chambres</h2>
-            <form>
-                <label for="codePostal">Code Postal :</label>
-                <input type="text" id="codePostal" name="codePostal" placeholder="Entrez le code postal">
-
-                <label for="budget">Budget maximum :</label>
-                <input type="text" id="budget" name="budget" placeholder="Entrez votre budget">
-
-                <button type="submit">Rechercher</button>
-            </form>
-        </section>
-        <section class="results">
-            <!-- Les résultats de la recherche seront affichés ici -->
-        </section>
-    </main>
-</body>
-</html>
-<body>
-    <header>
-        <h1>Réservation d'hôtel</h1>
-    </header>
-    <main>
-        <section class="search-form">
-            <h2>Recherchez des chambres</h2>
-            <form>
-                <label for="codePostal">Code Postal :</label>
-                <input type="text" id="codePostal" name="codePostal" placeholder="Entrez le code postal">
-
-                <label for="budget">Budget maximum :</label>
-                <input type="text" id="budget" name="budget" placeholder="Entrez votre budget">
-
-                <button type="submit">Rechercher</button>
-            </form>
-        </section>
-        <section class="results">
-            <!-- Les résultats de la recherche seront affichés ici -->
-        </section>
-    </main>
-</body>
-</html>
-

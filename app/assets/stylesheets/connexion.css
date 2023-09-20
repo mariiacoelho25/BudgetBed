@@ -1,0 +1,98 @@
+/* Assurez-vous de définir les styles spécifiques à votre formulaire de connexion dans connexion.css */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column; /* Ajout pour centrer verticalement */
+}
+
+.container-form {
+  max-width: 600px;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.03);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+/* Style pour le titre h2 */
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px; /* Espacement du titre par rapport au formulaire */
+  text-align: center; /* Centrer le titre horizontalement */
+}
+
+.form-inputs {
+  margin-bottom: 20px;
+}
+
+.form-inputs label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.form-inputs input[type="text"],
+.form-inputs input[type="password"],
+.form-inputs input[type="email"] {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #e4e4e7;
+  border-radius: 15px;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.form-primary-button {
+  background-color: #ba349d;
+  color: #fff;
+  border: none;
+  padding: 15px 30px; /* Agrandir le bouton */
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  text-align: center; /* Centrer le texte horizontalement */
+}
+
+.form-primary-button:hover {
+  background-color: #9f2987;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Styles pour la section "Mot de passe oublié ?" */
+.forgot-password {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px; /* Espacement par rapport au bouton de connexion */
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+}
+
+.forgot-password a {
+  color: #ba349d; /* Couleur du lien */
+  text-decoration: none; /* Supprimer le soulignement du lien */
+  padding: 15px;
+  margin-top: -29px
+}
+
+.forgot-password a:hover {
+  text-decoration: underline; /* Souligner le lien au survol */
+}

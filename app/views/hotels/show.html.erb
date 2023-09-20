@@ -1,0 +1,17 @@
+<!-- app/views/hotels/show.html.erb -->
+
+<h1><%= @hotel.name %></h1>
+<p><%= @hotel.address %></p>
+
+<h2>Available Rooms:</h2>
+<ul>
+  <% @rooms.each do |room| %>
+    <li>
+      <strong>Room Type:</strong> <%= room.room_type %><br>
+      <strong>Capacity:</strong> <%= room.capacity %><br>
+      <strong>Daily Rate:</strong> <%= room.daily_rate %>€<br>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Back to Hotel List", root_path %>

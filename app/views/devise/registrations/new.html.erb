@@ -1,0 +1,53 @@
+<div class="container text-center mt-5">
+
+<%= stylesheet_link_tag 'enregistrer', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="custom.css">
+    <title>Créer un compte</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="form-background"></div>
+            <div class="form-box">
+                <h1>Créer un compte</h1>
+                <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                    <%= f.error_notification %>
+                    <div class="form-inputs">
+                        <div class="row">
+                            <%= f.input :email,
+                                        required: true,
+                                        autofocus: true,
+                                        input_html: { autocomplete: "email" } %>
+
+                            <%= f.input :password,
+                                        required: true,
+                                        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                                        input_html: { autocomplete: "Mot de passe" } %>
+                            <%= f.input :password_confirmation,
+                                        required: true,
+                                        input_html: { autocomplete: "Confirmer mot de passe" } %>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                      <%= f.button :submit, "S'enregistrer", class: 'form-primary-button' %>
+
+                    </div>
+                <% end %>
+                <div class="terms">
+                    <label>
+                        <input type="checkbox" name="accept-terms">
+                        J’accepte les <a href="#">Conditions Générales</a> de BudgetBeds
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

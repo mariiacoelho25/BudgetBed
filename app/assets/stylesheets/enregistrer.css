@@ -1,0 +1,73 @@
+/* Assurez-vous de définir les styles spécifiques à votre formulaire de connexion dans connexion.css */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container-form {
+  max-width: 600px;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.03);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.form-inputs {
+  margin-bottom: 20px;
+}
+
+.form-inputs label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.form-inputs input[type="text"],
+.form-inputs input[type="password"],
+.form-inputs input[type="email"] {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #e4e4e7;
+  border-radius: 15px;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.form-primary-button {
+  background-color: #ba349d;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block;
+  margin: 0 auto; /* Centrer horizontalement */
+  margin-bottom: 10px;
+}
+
+.form-primary-button:hover {
+  background-color: #9f2987;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.primary-button {
+  flex: 1;
+}
+
+.primary-button {
+  margin-right: 10px;
+}

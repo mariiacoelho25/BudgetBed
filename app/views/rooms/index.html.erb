@@ -1,0 +1,20 @@
+<h1>Available Rooms for <%= @hotel.name %></h1>
+
+<ul>
+  <% @rooms.each do |room| %>
+    <li>
+      <strong>Capacity:</strong> <%= room.capacity %><br>
+      <strong>Daily Rate:</strong> <%= room.daily_rate %>€<br>
+
+      <%= form_with(model: [room.hotel, room, Reservation.new], local: true) do |form| %>
+        <%= form.hidden_field :room_id, value: room.id %>
+        <label for="check-in">Check-in Date:</label>
+        <input type="text" id="check-in" name="reservation[start_date]" data-controller="flatpickr" data-flatpickr-initial-value="<%= Date.current %>" data-flatpickr-date-format="Y-m-d" required>
+        <!-- Other form fields here -->
+        <%= form.submit "Reserve Room" %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Back to Hotel", root_path %>
