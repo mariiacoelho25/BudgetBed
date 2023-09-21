@@ -1,0 +1,13 @@
+<!-- app/views/reservations/_form.html.erb -->
+<%= form_with(model: [@hotel, @room, @reservation], local: true) do |form| %>
+
+  <%= form.hidden_field :hotel_id, value: @hotel.id %>
+  <%= form.hidden_field :room_id, value: @room.id %>
+
+  <div class="field">
+    <%= form.label :start_date, 'Date de début' %>
+    <%= form.text_field :start_date %>
+  </div>
+  <!-- Autres champs de formulaire ici -->
+  <%= form.submit "Créer la réservation" %>
+<% end %>

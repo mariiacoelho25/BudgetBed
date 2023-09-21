@@ -5,32 +5,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liste des Hôtels</title>
+    <%= stylesheet_link_tag '_home', media: 'all' %>
 </head>
 <body>
     <header>
         <h1>Liste des Hôtels</h1>
     </header>
     <main>
-        <section class="hotel-list">
+        <section class="hotel-list-container">
             <h2>Hôtels disponibles</h2>
-            <%= form_tag(root_path, method: :get) do %>
-                <label for="maxBudget">Budget maximum (en €) :</label>
-                <%= number_field_tag :max_budget, params[:max_budget], step: 10 %>
-                <%= submit_tag "Filtrer" %>
+            <%= form_tag(root_path, method: :get, class: 'search-form') do %>
+                <label class="search-label" for="maxBudget">Budget maximum (en €) :</label>
+                <%= number_field_tag :max_budget, params[:max_budget], step: 10, class: 'budget-input' %>
+                <%= submit_tag "Rechercher", class: 'filter-button' %>
             <% end %>
-            <ul>
-                <% @hotels.each do |hotel| %>
-                    <li>
-                        <%= link_to hotel.name, hotel_rooms_path(hotel) %>
-                    </li>
-                <% end %>
-            </ul>
+           <% @hotels.each do |hotel| %>
+<div class="hotel">
+  <h3><%= hotel.name %></h3>
+  <p><%= hotel.description %></p>
+  <a href="<%= hotel_rooms_path(hotel) %>" class="view-link">Voir plus</a>
+</div>
+<% end %>
         </section>
     </main>
-
-    <script>
-        // JavaScript code can be added here if needed
-    </script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+# config/routes.rb
 Rails.application.routes.draw do
   get 'sessions/new'
   get 'sessions/create'
@@ -11,15 +12,10 @@ Rails.application.routes.draw do
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
 
-# config/routes.rb
-resources :hotels do
+
+  resources :hotels do
   resources :rooms do
-    resources :reservations, only: [:create]
-  end
+  resources :reservations, only: [:index, :new, :create, :show]
 end
-
-# config/routes.rb
-post "/rooms/:room_id/reservations", to: "reservations#create", as: :create_reservation
-
-
-  end
+end
+end

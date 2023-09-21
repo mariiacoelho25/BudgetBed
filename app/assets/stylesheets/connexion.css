@@ -1,11 +1,9 @@
-/* Assurez-vous de définir les styles spécifiques à votre formulaire de connexion dans connexion.css */
-
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  flex-direction: column; /* Ajout pour centrer verticalement */
+  flex-direction: column;
 }
 
 .container-form {
@@ -17,13 +15,12 @@
   padding: 20px;
 }
 
-/* Style pour le titre h2 */
 h2 {
   font-size: 24px;
   font-weight: 600;
   color: #333;
-  margin-bottom: 20px; /* Espacement du titre par rapport au formulaire */
-  text-align: center; /* Centrer le titre horizontalement */
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .form-inputs {
@@ -54,7 +51,7 @@ h2 {
   background-color: #ba349d;
   color: #fff;
   border: none;
-  padding: 15px 30px; /* Agrandir le bouton */
+  padding: 15px 30px;
   border-radius: 10px;
   font-size: 16px;
   cursor: pointer;
@@ -62,7 +59,7 @@ h2 {
   display: block;
   margin: 0 auto;
   margin-bottom: 20px;
-  text-align: center; /* Centrer le texte horizontalement */
+  text-align: center;
 }
 
 .form-primary-button:hover {
@@ -75,24 +72,24 @@ h2 {
   align-items: center;
 }
 
-/* Styles pour la section "Mot de passe oublié ?" */
+
 .forgot-password {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10px; /* Espacement par rapport au bouton de connexion */
+  margin-top: 10px;
   font-size: 14px;
   color: #333;
   text-decoration: none;
 }
 
 .forgot-password a {
-  color: #ba349d; /* Couleur du lien */
-  text-decoration: none; /* Supprimer le soulignement du lien */
+  color: #ba349d;
+  text-decoration: none;
   padding: 15px;
   margin-top: -29px
 }
 
 .forgot-password a:hover {
-  text-decoration: underline; /* Souligner le lien au survol */
+  text-decoration: underline;
 }

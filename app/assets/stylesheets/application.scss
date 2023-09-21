@@ -13,6 +13,17 @@
 @import "footer";
 @import "navbar";
 
+body {
+  overflow: hidden; /* Masquer la barre de défilement principale du corps */
+  overflow-x: hidden; /* Désactive le défilement horizontal */
+}
+
+main {
+  max-height: 80vh; /* Hauteur maximale de 80% de la hauteur de la fenêtre */
+  overflow-y: auto; /* Activer la barre de défilement verticale si nécessaire */
+  overflow-x: hidden; /* Désactive le défilement horizontal dans la section main */
+}
+
 // Media queries for responsive design
 @media (max-width: 768px) {
     // Styles spécifiques aux petits écrans ici

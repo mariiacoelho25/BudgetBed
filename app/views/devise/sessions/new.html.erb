@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= stylesheet_link_tag 'connexion.css', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" href="connexion.css"> <!-- Ajout du lien vers le fichier custom.css -->
+    <link rel="stylesheet" href="connexion.css">
     <title>Connexion</title>
 </head>
 <body>
@@ -12,33 +12,28 @@
         <div class="form-container">
             <div class="form-background"></div>
             <div class="form-box">
-                <h1>Connexion</h1> <!-- Titre du formulaire -->
+                <h1>Connexion</h1>
 
-                <!-- Formulaire de connexion -->
                 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-                    <%= f.error_notification %>
-                    <div class="form-inputs">
-                        <div class="row">
-                            <!-- Champ Email -->
-                            <%= f.input :email,
-                                        required: false,
-                                        autofocus: true,
-                                        input_html: { autocomplete: "email" } %>
-
-                            <!-- Champ Mot de passe -->
-                            <%= f.input :password,
-                                        required: false,
-                                        input_html: { autocomplete: "current-password" } %>
-                        </div>
+                  <%= f.error_notification %>
+                  <div class="form-inputs">
+                    <div class="row">
+                      <%= f.label :email, 'Email' %>
+                      <%= f.input :email,
+                                  required: false,
+                                  autofocus: true,
+                                  input_html: { autocomplete: "email" } %>
+                      <%= f.label :password, 'Mot de passe' %>
+                      <%= f.input :password,
+                                  required: false,
+                                  input_html: { autocomplete: "current-password" } %>
                     </div>
-            </div>
-
-                    <div class="form-actions">
-                        <%= link_to "Se connecter", root_path, class: 'form-primary-button' %>
-                    </div>
+                  </div>
+                  <div class="form-actions">
+                    <%= f.button :submit, "Se connecter", class: 'form-primary-button', type: "submit" %>
+                  </div>
                 <% end %>
-
-
+            </div>
         </div>
     </div>
 </body>

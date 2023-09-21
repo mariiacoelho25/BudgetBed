@@ -1,0 +1,21 @@
+<h1>Mes Réservations</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Chambre</th>
+      <th>Date de début</th>
+      <th>Date de fin</th>
+      <th>Autres détails</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @reservations.each do |reservation| %>
+      <tr>
+        <td><%= reservation.room.name %></td>
+        <td><%= reservation.start_date %></td>
+        <td><%= reservation.end_date %></td>
+        <td><%= reservation.other_attributes %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

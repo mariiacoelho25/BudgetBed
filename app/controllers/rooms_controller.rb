@@ -1,15 +1,19 @@
-
 class RoomsController < ApplicationController
+  before_action :find_hotel_and_room, only: [:index]
+
   def index
-    @hotel = Hotel.find(params[:hotel_id]) # Find the selected hotel
-    @rooms = @hotel.rooms # Get the rooms associated with the selected hotel
+    @reservation = Reservation.new
+    @reservations = Reservation.where(room: @room)
   end
 
   def new
-    # Your new action code here
+    @room = Room.new
   end
 
-  def create
-    # Your create action code here
+  private
+
+  def find_hotel_and_room
+    @hotel = Hotel.find(params[:hotel_id])
+    @room = Room.find(params[:room_id])
   end
 end

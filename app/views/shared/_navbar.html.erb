@@ -6,11 +6,11 @@
   </div>
   <ul class="nav-links">
     <% if user_signed_in? %>
-      <%= link_to "Mes réservations", root_path, class: 'primary-button' %>
+  <%= link_to "Mes réservations", hotel_room_reservations_path(@hotel, @room), class: 'primary-button' %>
+
       <%= link_to "Déconnexion", destroy_user_session_path, data: {turbo_method: :delete}, class: 'secondary-btn' %>
     <% else %>
       <%= link_to 'Connexion', new_user_session_path, class: 'primary-button' %>
-      <%= link_to 'S\'inscrire', new_user_registration_path, class: 'secondary-btn' %>
     <% end %>
   </ul>
 </header>
