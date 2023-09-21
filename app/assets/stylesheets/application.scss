@@ -14,26 +14,23 @@
 @import "navbar";
 
 body {
-  overflow: hidden; /* Masquer la barre de défilement principale du corps */
-  overflow-x: hidden; /* Désactive le défilement horizontal */
+  overflow: hidden;
+  overflow-x: hidden;
 }
 
 main {
-  max-height: 80vh; /* Hauteur maximale de 80% de la hauteur de la fenêtre */
-  overflow-y: auto; /* Activer la barre de défilement verticale si nécessaire */
-  overflow-x: hidden; /* Désactive le défilement horizontal dans la section main */
+  max-height: 80vh;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
-// Media queries for responsive design
+
 @media (max-width: 768px) {
-    // Styles spécifiques aux petits écrans ici
-    // Vous pouvez également utiliser des classes Bootstrap pour la conception réactive
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
-    // Styles spécifiques aux écrans de taille moyenne ici
+
 }
 
 @media (min-width: 1201px) {
-    // Styles spécifiques aux grands écrans ici
 }

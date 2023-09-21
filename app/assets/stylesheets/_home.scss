@@ -1,16 +1,13 @@
-/* app/assets/stylesheets/_home.scss */
-
-/* Styles globaux */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
-/* Styles spécifiques à la page */
+
 .hotel-list-container {
-  max-width: 1200px; /* Largeur maximale du contenu */
-  margin: 0 auto; /* Centrage du contenu */
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
 }
 
@@ -21,7 +18,7 @@ body {
 }
 
 .hotel {
-  width: calc(33.33% - 20px); /* 3 colonnes avec un espacement de 20px entre elles */
+  width: calc(33.33% - 20px);
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -41,12 +38,5 @@ h3 {
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
-  text-align: center; /* Centrer le texte dans le lien */
+  text-align: center;
 }
-
-// /* Ajoutez ce style pour créer des conteneurs carrés */
-// .hotel::before {
-//   content: "";
-//   padding-top: 100%; /* Ratio 1:1 pour créer des conteneurs carrés */
-//   display: block;
-// }

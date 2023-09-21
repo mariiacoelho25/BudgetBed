@@ -1,4 +1,3 @@
-# app/controllers/registrations_controller.rb
 class RegistrationsController < ApplicationController
   def new
     @user = User.new

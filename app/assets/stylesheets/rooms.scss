@@ -1,47 +1,39 @@
-/* rooms.scss */
-
-/* Center the container vertically and horizontally */
 body {
   display: flex;
-  flex-direction: column; /* Stack elements vertically */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Makes sure the container takes up the full viewport height */
-  margin: 0; /* Remove default body margin */
+  height: 100vh;
+  margin: 0;
 }
 
-/* Style the container */
 .container {
-  width: 90%; /* Adjust the width as needed */
-  max-width: 1200px; /* Limit the maximum width */
-  margin: 20px auto; /* Center the container horizontally */
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
   padding: 20px;
   text-align: center;
-  background-color: #fff; /* Container background color */
-  border-radius: 5px; /* Add rounded corners to the container */
+  background-color: #fff;
+  border-radius: 5px;
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.03);
 }
 
-/* Style the page title */
 h1 {
   font-size: 24px;
-  margin: 10px 0; /* Adjusted spacing for the title */
-  /* Text styling */
+  margin: 10px 0;
+
 }
 
-/* Style the room listings */
 ul {
   list-style-type: none;
   padding: 0;
 }
 
 li {
-  margin: 10px 0; /* Adjusted spacing for each room */
+  margin: 10px 0;
   border: 1px solid #ddd;
   border-radius: 5px;
   background-color: #f9f9f9;
   padding: 10px;
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
 }
-
-/* Style the rest of the elements as needed */

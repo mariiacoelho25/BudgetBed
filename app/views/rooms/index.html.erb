@@ -8,7 +8,6 @@
 </head>
 <body>
     <div class="container">
-        <!-- Place the title at the top of the container -->
         <h1>Available Rooms for <%= @hotel.name %></h1>
 
         <ul>
@@ -17,16 +16,14 @@
                     <strong>Capacity:</strong> <%= room.capacity %><br>
                     <strong>Daily Rate:</strong> <%= room.daily_rate %>€<br>
 
-<%= form_with(model: [room.hotel, room, @reservation], local: true) do |form| %>
-  <%= form.hidden_field :room_id, value: room.id %>
-  <label for="check-in">Check-in Date:</label>
-  <input type="text" id="check-in" name="reservation[start_date]" data-controller="flatpickr" data-flatpickr-initial-value="<%= Date.current %>" data-flatpickr-date-format="Y-m-d" required>
-  <label for="check-out">Check-out Date:</label>
-  <input type="text" id="check-out" name="reservation[end_date]" data-controller="flatpickr" data-flatpickr-initial-value="<%= Date.current %>" data-flatpickr-date-format="Y-m-d" required>
-  <%= form.submit "Réserver la chambre" %>
-<% end %>
-
-
+                    <%= form_with(model: [room.hotel, room, @reservation], local: true) do |form| %>
+                        <%= form.hidden_field :room_id, value: room.id %>
+                        <label for="check-in">Check-in Date:</label>
+                        <input type="text" id="check-in" name="reservation[start_date]" data-controller="flatpickr" data-flatpickr-initial-value="<%= Date.current %>" data-flatpickr-date-format="Y-m-d" required>
+                        <label for="check-out">Check-out Date:</label>
+                        <input type="text" id="check-out" name="reservation[end_date]" data-controller="flatpickr" data-flatpickr-initial-value="<%= Date.current %>" data-flatpickr-date-format="Y-m-d" required>
+                        <%= form.submit "Réserver la chambre" %>
+                    <% end %>
                 </li>
             <% end %>
         </ul>
